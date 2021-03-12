@@ -1,0 +1,9 @@
+.HeaderWrap{
+    position: fixed;
+ 
+    width: calc(100% - 255px);
+    background-color: #ccc;
+    margin-left: 255px;
+    flex-grow: 1;
+
+}
