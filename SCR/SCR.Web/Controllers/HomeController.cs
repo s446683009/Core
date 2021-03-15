@@ -26,6 +26,7 @@ namespace SCR.Web.Controllers
         [Authorize]
         public IActionResult Privacy()
         {
+           
             return View();
         }
 
