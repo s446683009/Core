@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCR.Repository", "SCR.Repos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCR.Models", "SCR.Models\SCR.Models.csproj", "{9B616DA1-A9F0-461D-B3AF-254B1CAB8191}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCR.Web", "SCR.Web\SCR.Web.csproj", "{4B118C01-B224-4141-8737-1DC874AE5F80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCR.Web", "SCR.Web\SCR.Web.csproj", "{3A78A258-E3DD-40DB-817A-A7ACEC5F7317}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{9B616DA1-A9F0-461D-B3AF-254B1CAB8191}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B616DA1-A9F0-461D-B3AF-254B1CAB8191}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B616DA1-A9F0-461D-B3AF-254B1CAB8191}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B118C01-B224-4141-8737-1DC874AE5F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B118C01-B224-4141-8737-1DC874AE5F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B118C01-B224-4141-8737-1DC874AE5F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B118C01-B224-4141-8737-1DC874AE5F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A78A258-E3DD-40DB-817A-A7ACEC5F7317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A78A258-E3DD-40DB-817A-A7ACEC5F7317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A78A258-E3DD-40DB-817A-A7ACEC5F7317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A78A258-E3DD-40DB-817A-A7ACEC5F7317}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

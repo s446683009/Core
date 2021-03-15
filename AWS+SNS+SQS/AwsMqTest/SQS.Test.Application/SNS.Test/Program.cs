@@ -45,14 +45,18 @@ namespace SNS.Test
 
                 topicArn = l_response.Topics.First().TopicArn;
             }
-            //Subscription subscriptions;
-            //var ls_response = await client.ListSubscriptionsByTopicAsync(topicArn);
-            //if (!ls_response.Subscriptions.Any(t => t.SubscriptionArn == "arn:aws:sns:us-east-1:000000000000:test:bac7453b-ae89-4021-81f2-044890c0d68c")) {
+            Subscription subscriptions;
+            var ls_response = await client.ListSubscriptionsByTopicAsync(topicArn);
+            //if (!ls_response.Subscriptions.Any(t => t.SubscriptionArn == "arn:aws:sns:us-east-1:000000000000:test:bac7453b-ae89-4021-81f2-044890c0d68c"))
+            //{
             //    //如果没有订阅创建订阅
-            // var s_response= await client.SubscribeQueueToTopicsAsync(new List<string>() { topicArn},as_client, "http://localhost:4566/000000000000/test");
-              
-
+            //    var s_response = await client.SubscribeQueueToTopicsAsync(new List<string>() { topicArn }, as_client, "http://localhost:4566/000000000000/test");
             //}
+            //if (!ls_response.Subscriptions.Any(sc => sc.SubscriptionArn == "arn:aws:sns:us-east-1:000000000000:test:af7b8b93-b332-47f1-9fd8-4ffa6f6adb07")) {
+
+            //    var s_response = await client.SubscribeAsync(topicArn, "email", "446683009@qq.com");
+            //}
+           
             var p_response=await client.PublishAsync(topicArn,"from sns publish message");
 
             Console.WriteLine("success");
