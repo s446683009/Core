@@ -15,6 +15,7 @@ namespace SCR.Web.Controllers
 {
     public class HomeController : Controller
     {
+       
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -24,6 +25,7 @@ namespace SCR.Web.Controllers
 
         public IActionResult Index()
         {
+   
             if (!HttpContext.AuthenticateAsync().Result.Succeeded) {
                 //必须使用有参构造函数
                 //用户登录需要一个主身份
@@ -69,6 +71,7 @@ namespace SCR.Web.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
         [Authorize(Roles ="Admin")]
+        [Authorize("")]
         public IActionResult Login() {
 
             return Content("登录成功");

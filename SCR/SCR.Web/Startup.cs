@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 namespace SCR.Web
 {
     public class Startup
@@ -30,15 +30,20 @@ namespace SCR.Web
       
             //添加控制器和视图 包括webapi 控制器
             services.AddControllersWithViews();
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme,options=> {
-                //设置验证为通过
-                options.LoginPath = "/Home/Login";
-                options.ExpireTimeSpan = new TimeSpan(0,20,0);
-                options.AccessDeniedPath = "/Home/AccessDenied";
-               
-            });
-            services.AddAuthorization();
-            services.AddTransient<IAuthorizationHandler,UserAuthorizationHandler>();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .addcookie(cookieauthenticationdefaults.authenticationscheme, options =>
+                {
+                    //设置验证为通过
+                    options.loginpath = "/home/login";
+                    options.expiretimespan = new timespan(0, 20, 0);
+                    options.accessdeniedpath = "/home/accessdenied";
+
+
+                });
+
+
+            services.AddTransient<IAuthorizationHandler,PermissionAuthorizationHandler>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

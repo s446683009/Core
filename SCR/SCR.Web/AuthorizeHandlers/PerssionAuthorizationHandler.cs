@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace SCR.Web.AuthorizeHanders
 {
-    public class UserAuthorizationHandler : IAuthorizationHandler
+    public class PermissionAuthorizationHandler : IAuthorizationHandler
     {
 
 
         public Task HandleAsync(AuthorizationHandlerContext context)
         {
-           
-            AuthorizationFilterContext filterContext = context.Resource as AuthorizationFilterContext;
+        
             HttpContext httpContext = filterContext.HttpContext;
 
             var controllerName = httpContext.Request.RouteValues["controller"].ToString();

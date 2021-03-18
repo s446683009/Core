@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7piXZbcLPXynb6/4KpMO3EXMQk4wrDmi33VeBhSDF6bUxlkXYp6Qcsq4mr65jNYQ4K8SSOtuzbb01SjZPOCbsw==",
+  "dgSpecHash": "VgwceMBZ4pxaQIRFiJX/bU4eoquJ5/z6VXC9SjQqY6ih5MY4fLx1dmqZqGW0bQEwAyZoQYhVJHphYiF+weWMzg==",
   "success": true,
   "projectFilePath": "D:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\SoloTravelling\\.nuget\\packages\\dapper.fluentmap\\2.0.0\\dapper.fluentmap.2.0.0.nupkg.sha512",
     "C:\\Users\\SoloTravelling\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\SoloTravelling\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\SoloTravelling\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
     "C:\\Users\\SoloTravelling\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
     "C:\\Users\\SoloTravelling\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
   ],
