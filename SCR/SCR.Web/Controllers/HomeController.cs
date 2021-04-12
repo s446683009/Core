@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -7,6 +8,7 @@ using SCR.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -45,15 +47,17 @@ namespace SCR.Web.Controllers
                 var principal = new ClaimsPrincipal(indentity);
                 principal.AddIdentity(subIndentity);
                 //以Cookies的方式登录 
-      
-                //接下来获取用户权限信息，写入缓存中
-                //例如在数据库中存储角色或者用户所允许访问的controller 的名字和action的名字，在这里取出，然后写入redis 缓存中，使用用户组件来标识
                 //同一个用户不同浏览器登录如何解决？貌似不用解决，权限信息不用对应每次对话
-                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal).Wait();
+                //HttpContext.SignInAsync(JwtBearerDefaults.AuthenticationScheme, principal).Wait();
+                // 结束
 
-        
+                JwtSecurityToken token = new JwtSecurityToken(issuer:);
 
-            }
+
+
+
+
+    }
             return View();
 
         }

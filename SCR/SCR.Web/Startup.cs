@@ -12,6 +12,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using SCR.Web.Rquirements;
+using SCR.Web.Models.Configs;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
 namespace SCR.Web
 {
     public class Startup
@@ -27,20 +32,31 @@ namespace SCR.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
-      
+            var jwtSettings= Configuration.GetSection("JwtSetttings").Get<JwtSetting>();
+
+
             //添加控制器和视图 包括webapi 控制器
             services.AddControllersWithViews();
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .addcookie(cookieauthenticationdefaults.authenticationscheme, options =>
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,options=> {
+                options.TokenValidationParameters= new TokenValidationParameters()
                 {
-                    //设置验证为通过
-                    options.loginpath = "/home/login";
-                    options.expiretimespan = new timespan(0, 20, 0);
-                    options.accessdeniedpath = "/home/accessdenied";
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings.Issuer,
+                    ValidAudience = jwtSettings.Audience,
+                    //用于签名验证
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtSettings.Secret)),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+                options.SaveToken = true;
+            });
 
-
+            services.AddAuthorization(options=> {
+                options.AddPolicy("permission",p=> {
+                    p.Requirements.Add(new PemissionRequirement());
                 });
-
+            });
 
             services.AddTransient<IAuthorizationHandler,PermissionAuthorizationHandler>();
 
