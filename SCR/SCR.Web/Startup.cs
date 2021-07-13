@@ -33,7 +33,7 @@ namespace SCR.Web
         {
 
             var jwtSettings= Configuration.GetSection("JwtSetttings").Get<JwtSetting>();
-
+            services.AddSingleton(jwtSettings);
 
             //添加控制器和视图 包括webapi 控制器
             services.AddControllersWithViews();
@@ -47,7 +47,8 @@ namespace SCR.Web
                     //用于签名验证
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtSettings.Secret)),
                     ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidateAudience = false,
+                    
                 };
                 options.SaveToken = true;
             });
@@ -77,8 +78,6 @@ namespace SCR.Web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
-          
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

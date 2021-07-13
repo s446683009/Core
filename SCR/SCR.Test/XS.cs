@@ -1,4 +1,6 @@
+using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
+using System.Configuration;
 
 namespace SCR.Test
 {
@@ -7,6 +9,10 @@ namespace SCR.Test
         [SetUp]
         public void Setup()
         {
+           
+            var services = new ServiceCollection();
+            
+            services.AddSingleton();
         }
 
         [Test]

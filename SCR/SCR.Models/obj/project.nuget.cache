@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KJbbAaoec2WeGV5FmlvggqqfXJVGXPyON4g1ybNCvogTizo1eJLY7nVuQLRnR9G4MNnB3qXSfZfBbeE/EZGb7w==",
+  "dgSpecHash": "bWP4RTcuKLshaX4v21MenVr0tF3KW2Zh2n9PTbGSUyDKLD/UBN0UqfZ+uknopWTIuwcjBgXrJwLNfUiHHqRylA==",
   "success": true,
-  "projectFilePath": "D:\\mylife\\Core\\SCR\\SCR.Models\\SCR.Models.csproj",
+  "projectFilePath": "d:\\mylife\\Core\\SCR\\SCR.Models\\SCR.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SoloTravelling\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\SoloTravelling\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

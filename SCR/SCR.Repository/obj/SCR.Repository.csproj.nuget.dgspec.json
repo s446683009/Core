@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj": {}
+    "d:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj": {}
   },
   "projects": {
-    "D:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj": {
+    "d:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj",
+        "projectUniqueName": "d:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj",
         "projectName": "SCR.Repository",
-        "projectPath": "D:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj",
+        "projectPath": "d:\\mylife\\Core\\SCR\\SCR.Repository\\SCR.Repository.csproj",
         "packagesPath": "C:\\Users\\SoloTravelling\\.nuget\\packages\\",
-        "outputPath": "D:\\mylife\\Core\\SCR\\SCR.Repository\\obj\\",
+        "outputPath": "d:\\mylife\\Core\\SCR\\SCR.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SoloTravelling\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,7 +69,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
