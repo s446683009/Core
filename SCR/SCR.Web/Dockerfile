@@ -8,8 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 
-COPY */*.csproj ./
-RUN for file in $(ls *.csproj); do mkdir -p ${file%.*}/ && mv $file ${file%.*}/; done
+COPY ./SCR.Web.csproj ./SCR.Web/
 
 
 RUN dotnet restore "SCR.Web/SCR.Web.csproj"
