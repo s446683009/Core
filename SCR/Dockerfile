@@ -17,7 +17,7 @@ COPY ./SCR.Repository/SCR.Repository.csproj ./SCR.Repository/SCR.Repository.cspr
 
 RUN dotnet restore "SCR.Web/SCR.Web.csproj"
 COPY . .
-WORKDIR "/src/SCR.Web"
+WORKDIR "/src"
 RUN dotnet build "SCR.Web/SCR.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
