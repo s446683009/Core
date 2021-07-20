@@ -8,7 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 
-COPY ./SCR.Web.csproj ./SCR.Web/
+COPY ./SCR.Web/SCR.Web.csproj ./SCR.Web/
 COPY ./SCR.Domain/SCR.Domain.csproj ./SCR.Domain/SCR.Domain.csproj
 COPY ./SCR.EventBus/SCR.EventBus/.csproj ./SCR.EventBus/SCR.EventBus.csproj
 COPY ./SCR.EventBus.MS/SCR.MSEventBus.csproj ./SCR.EventBus.MS/SCR.MSEventBus.csproj
