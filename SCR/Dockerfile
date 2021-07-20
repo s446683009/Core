@@ -10,7 +10,7 @@ WORKDIR /src
 
 COPY ./SCR.Web/SCR.Web.csproj ./SCR.Web/
 COPY ./SCR.Domain/SCR.Domain.csproj ./SCR.Domain/SCR.Domain.csproj
-COPY ./SCR.EventBus/SCR.EventBus/.csproj ./SCR.EventBus/SCR.EventBus.csproj
+COPY ./SCR.EventBus/SCR.EventBus.csproj ./SCR.EventBus/SCR.EventBus.csproj
 COPY ./SCR.EventBus.MS/SCR.MSEventBus.csproj ./SCR.EventBus.MS/SCR.MSEventBus.csproj
 COPY ./SCR.Models/SCR.Models.csproj. ./SCR.Models/SCR.Models.csproj
 COPY ./SCR.Repository/SCR.Repository.csproj ./SCR.Repository/SCR.Repository.csproj
